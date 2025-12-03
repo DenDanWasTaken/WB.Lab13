@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="author" content="Фільшин Едуард">
+  <meta name="description" content="Лабораторна робота №12 з веб-розробки. Виконана Фільшиним Едуардом.">
+  <meta name="keywords" content="веб-розробка, bootstrap, лабораторна робота, адаптивний дизайн, JavaScript">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Фільшин Едуард</title>
+  <link rel="icon" href="images/favicon.png" type="images/png">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <script>
+    "use strict";
+    let today = new Date();
+    let month = today.getMonth();
+    let day = today.getDate();
+    let weekday = today.getDay();
+    let season = "";
+    let size = "1em";
+    let color = "black";
+    switch (weekday) {
+      case 0: weekday = "Неділя";
+        size = "7em";
+        break;
+      case 1: weekday = "Понеділок";
+        size = "6em";
+        break;
+      case 2: weekday = "Вівторок";
+        size = "5em";
+        break;
+      case 3: weekday = "Середа";
+        size = "4em";
+        break;
+      case 4: weekday = "Четвер";
+        size = "3em";
+        break;
+      case 5: weekday = "П'ятниця";
+        size = "2em";
+        break;
+      case 6: weekday = "Субота";
+        size = "1em";
+        break;
+    }
+    switch (month) {
+      case 0: month = "Січень"; break;
+      case 1: month = "Лютий"; break;
+      case 2: month = "Березень"; break;
+      case 3: month = "Квітень"; break;
+      case 4: month = "Травень"; break;
+      case 5: month = "Червень"; break;
+      case 6: month = "Липень"; break;
+      case 7: month = "Серпень"; break;
+      case 8: month = "Вересень"; break;
+      case 9: month = "Жовтень"; break;
+      case 10: month = "Листопад"; break;
+      case 11: month = "Грудень"; break;
+    }
+    switch (month) {
+      case "Грудень":
+      case "Січень":
+      case "Лютий":
+        season = "Зима";
+        color = "blue";
+        break;
+      case "Березень":
+      case "Квітень":
+      case "Травень":
+        season = "Весна";
+        color = "green";
+        break;
+      case "Червень":
+      case "Липень":
+      case "Серпень":
+        season = "Літо";
+        color = "red";
+        break;
+      case "Вересень":
+      case "Жовтень":
+      case "Листопад":
+        season = "Осінь";
+        color = "orange";
+        break;
+      default:
+        season = "Невідомо";
+        color = "black";
+    }
+
+    console.log("Поточний місяць - ", month);
+    document.write("<p style='text-align:center'>Поточний місяць - ", month, "</p>");
+    console.log("Поточний день місяця - ", day);
+    document.write("<p style='text-align:center'>Поточний день місяця - ", day, "</p>");
+    console.log("Поточний день тижня - ", weekday);
+    document.write("<p style='text-align:center'>Поточний день тижня - <strong style='font-size:" + size + "'>", weekday, "</strong></p>");
+    console.log("Визначення пори року за місяцем:");
+    console.log("Пора року - ", season);
+    document.write("<p style='text-align:center'>Визначення пори року за місяцем:</p>");
+    document.write("<p style='text-align:center'>Пора року - <strong style='color:" + color + "'>", season, "</strong></p>");
+  </script>
+</body>
+
+</html>
