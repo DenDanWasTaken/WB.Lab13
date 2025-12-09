@@ -19,32 +19,14 @@
 
 <body>
   <script>
-    "use strict";
-    let lightsOn = true;
-    if (lightsOn) {
-      document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong></p>");
-      document.write("Світло увімкнене!"); // виводиться
-      lightsOn = false;
-    }
-    if (lightsOn) {
-      document.write("Світло досі увімкнене!"); // не виводиться 
-    }
-    else {
-      document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong> з блоком <strong>ELSE</strong></p>");
-      document.write("Світло вимкнене!"); // виводиться
-    }
-    let favColor = "червоний";
-    if (favColor == "зелений") {
-      document.write("Ваш улюблений колір - зелений."); // не виводиться
-    }
-    else
-      if (favColor == "синій") {
-        document.write("Ваш улюблений колір - синій."); // не виводиться
-      }
-      else {
-        document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong> з блоком <strong>ELSE IF</strong></p>");
-        document.write("Ваш улюблений колір - ", favColor, "."); // виводиться
-      }
+    //Опис функції виведення рядка з випадковим числом у заданому діапазоні
+      "use strict";
+			function RandNum(min, max) { 
+				document.write("Випадкове число - " + (Math.floor(Math.random() * (max - min + 1)) + min) + "<br>");
+			}
+      RandNum(1, 100);
+      RandNum(200, 300);
+      RandNum(1000, 2000);
   </script>
 </body>
 

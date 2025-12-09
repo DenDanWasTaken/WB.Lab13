@@ -20,31 +20,20 @@
 <body>
   <script>
     "use strict";
-    let lightsOn = true;
-    if (lightsOn) {
-      document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong></p>");
-      document.write("Світло увімкнене!"); // виводиться
-      lightsOn = false;
+    function RandNum(min = 1, max = 30) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    if (lightsOn) {
-      document.write("Світло досі увімкнене!"); // не виводиться 
-    }
-    else {
-      document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong> з блоком <strong>ELSE</strong></p>");
-      document.write("Світло вимкнене!"); // виводиться
-    }
-    let favColor = "червоний";
-    if (favColor == "зелений") {
-      document.write("Ваш улюблений колір - зелений."); // не виводиться
-    }
-    else
-      if (favColor == "синій") {
-        document.write("Ваш улюблений колір - синій."); // не виводиться
-      }
-      else {
-        document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong> з блоком <strong>ELSE IF</strong></p>");
-        document.write("Ваш улюблений колір - ", favColor, "."); // виводиться
-      }
+
+    document.write("Випадкове число між діапазоном за замовченням (1 і 30) = ", RandNum());
+
+    let b = 50;
+
+    document.write("<br>Випадкове число між діапазоном з мінімумом за замовченням (1 і "+ b + ") ", RandNum(undefined, b));
+
+    let a = 25;
+
+    document.write("<br>Випадкове число між діапазоном з максимумом за замовченням ("+ a + " і 30) = ", RandNum(a));
+    document.write("<br>Випадкове число між діапазоном без значень за замовченням ("+ a + " і "+ b +") = ", RandNum(a, b));
   </script>
 </body>
 

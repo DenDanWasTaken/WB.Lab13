@@ -21,23 +21,19 @@
   <h1 id="countdown"></h1>
   <script>
     "use strict";
-    function updateCountdown() {
-      let today = new Date();
-      let myBirthday = new Date(today.getFullYear() + 1, 4, 26);
-      const day = 86400000;
-      const hour = 3600000;
-      const minute = 60000;
-      const second = 1000;
-      let time = myBirthday.getTime() - today.getTime();
-      let days = Math.floor(time / day);
-      let hours = Math.floor((time - days * day) / hour);
-      let minutes = Math.floor((time - days * day - hours * hour) / minute);
-      let seconds = Math.floor((time - days * day - hours * hour - minutes * minute) / second);
-      let str = days + " днів, " + hours + " годин, " + minutes + " хвилин, " + seconds + " секунд.";
-      document.getElementById("countdown").textContent = "До мого дня народження залишилось: " + str;
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    let today = new Date();
+    let myBirthday = new Date(today.getFullYear() + 1, 4, 26);
+    const day = 86400000;
+    const hour = 3600000;
+    const minute = 60000;
+    const second = 1000;
+    let time = myBirthday.getTime() - today.getTime();
+    let days = Math.floor(time / day);
+    let hours = Math.floor((time - days * day) / hour);
+    let minutes = Math.floor((time - days * day - hours * hour) / minute);
+    let seconds = Math.floor((time - days * day - hours * hour - minutes * minute) / second);
+    let str = days + " днів, " + hours + " годин, " + minutes + " хвилин, " + seconds + " секунд.";
+    document.getElementById("countdown").textContent = "До мого дня народження залишилось: " + str;
   </script>
 </body>
 

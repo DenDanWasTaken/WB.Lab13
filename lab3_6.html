@@ -20,31 +20,16 @@
 <body>
   <script>
     "use strict";
-    let lightsOn = true;
-    if (lightsOn) {
-      document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong></p>");
-      document.write("Світло увімкнене!"); // виводиться
-      lightsOn = false;
+    function Double(a) {
+      return a * 2;
     }
-    if (lightsOn) {
-      document.write("Світло досі увімкнене!"); // не виводиться 
+    function Add3(a, func) {
+      return func(a) + 3;
     }
-    else {
-      document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong> з блоком <strong>ELSE</strong></p>");
-      document.write("Світло вимкнене!"); // виводиться
-    }
-    let favColor = "червоний";
-    if (favColor == "зелений") {
-      document.write("Ваш улюблений колір - зелений."); // не виводиться
-    }
-    else
-      if (favColor == "синій") {
-        document.write("Ваш улюблений колір - синій."); // не виводиться
-      }
-      else {
-        document.write("<p style='text-align:center'>Використання оператора <strong>IF</strong> з блоком <strong>ELSE IF</strong></p>");
-        document.write("Ваш улюблений колір - ", favColor, "."); // виводиться
-      }
+
+    let result = Add3(5, Double);
+
+    document.write("<h2>Результат = ", result, "</h2>");
   </script>
 </body>
 
